@@ -15,18 +15,18 @@ var gameOver,restart;
 
 function preload(){
   trex_running = loadAnimation("dinosaur_PNG16595.png");
-  trex_collided = loadImage("trex_collided.png");
+  trex_collided = loadImage("dinosaur_PNG16595.png");
   
   groundImage = loadImage("ground2.png");
   
   cloudImage = loadImage("cloud.png");
   
-  obstacle1 = loadImage("obstacle1.png");
-  obstacle2 = loadImage("obstacle2.png");
-  obstacle3 = loadImage("obstacle3.png");
-  obstacle4 = loadImage("obstacle4.png");
-  obstacle5 = loadImage("obstacle5.png");
-  obstacle6 = loadImage("obstacle6.png");
+  obstacle1 = loadImage("jet_fighter_PNG111.png");
+  obstacle2 = loadImage("jet_fighter_PNG111.png");
+  obstacle3 = loadImage("jet_fighter_PNG111.png");
+  obstacle4 = loadImage("jet_fighter_PNG111.png");
+  obstacle5 = loadImage("jet_fighter_PNG111.png");
+  obstacle6 = loadImage("jet_fighter_PNG111.png");
   
   gameOverImg = loadImage("gameOver.png");
   
@@ -36,10 +36,10 @@ function preload(){
 function setup() {
   createCanvas(displayWidth - 15,displayHeight - 145);
   
-  trex = createSprite(50,568,20,50);
+  trex = createSprite(70,568,20,50);
   trex.addAnimation("running", trex_running);
   trex.addAnimation("collided",trex_collided);
-  trex.scale = 0.7;
+  trex.scale = 0.2;
   
   ground = createSprite(200,560,400,20);
   ground.addImage("ground",groundImage);
@@ -166,7 +166,7 @@ function spawnObstacles() {
     }
     
     //assign scale and lifetime to the obstacle           
-    obstacle.scale = 0.62;
+    obstacle.scale = 0.2;
     obstacle.lifetime = 300;
     //add each obstacle to the group
     obstaclesGroup.add(obstacle);
